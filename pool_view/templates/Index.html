@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+        <h1> Sistema de conexiones de bases de datos </h1>
+
+        <div>
+            Numero de Conexiones: {{no_conex}}
+        </div>
+        <br/>
+            <div>
+                <center>
+                     <a href="Add_connex"> Agregar conexion </a>
+                </center>
+            </div>
+        <div>
+            <ul>
+                {% for element in connex  %}
+                    <li>
+                        conexs_pool {{element.id}}:
+                        {{element.ip}}
+                        {{element.user}}
+                        {{element.pwd}}
+                        {{element.db_type}}
+                        {{element.Active}}
+                        <a href="details_connex/{{element.id}}">Ver a detalle</a>
+
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+
+
+</body>
+</html>

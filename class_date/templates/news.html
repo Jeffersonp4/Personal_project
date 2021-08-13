@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Connex</title>
+</head>
+<body>
+
+<form method="POST">
+    <h1> Add Connex </h1>
+    <br/>
+    <br/>
+    <table>
+          {{formconnex}}
+    </table>
+    <br/>
+    <button type="submit"> Guardar </button>
+    {% csrf_token %}
+
+</form>
+
+</body>
+</html>
